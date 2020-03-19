@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: jwang-sa-rolebinding
+  namespace: kube-system
+subjects:
+- kind: ServiceAccount
+  name: jwang-sa
+  namespace: kube-system
+roleRef:
+  kind: Role
+  name: jwang-sa-role
+  apiGroup: rbac.authorization.k8s.io
